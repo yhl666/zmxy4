@@ -47,3 +47,6 @@ vscode需要安装的相关插件https://blog.csdn.net/Evelyn_178/article/detail
 | 魂器搜索 | 角色装备搜索 |
 | :------: | :------: |
 | ![alipay](/img/111.png) | ![wepay](/img/222.png) |
+| 微信打赏 |
+| :------: |
+| ![微信打赏](%E8%B5%9E%E8%B5%8F%E7%A0%81%E6%94%AF%E6%8C%81.jpg) |
