@@ -1,0 +1,61 @@
+<!-- 前端 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>模糊查询</title>
+    <style>
+        body {
+            background-image: url('/img/bz.png');
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>模糊查询</h1>
+
+    <form action="/search" method="post">
+        <label for="id">类型ID:</label>
+        <input type="text" id="id" name="id"><br><br>
+        <label for="name">名称:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="description">说明:</label>
+        <input type="text" id="description" name="description"><br><br>
+        <button type="submit">搜索</button>
+        <p style="color: rgb(79, 155, 236);">类型分别有【装备】【宠物】【时装】【魂器】【法宝】【坐骑】【道具】【翅膀】</p>
+    </form>
+
+    <% if (results && results.length > 0) { %>
+        <h2>查询结果:</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>道具ID</th>
+                    <th>名称</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(function(result) { %>
+                    <tr>
+                        <td>
+                            <%= result.Nameid %>
+                        </td>
+                        <td>
+                            <%= result.name %>
+                        </td>
+                        <td>
+                            <%= result.shuoming %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <% } else if (results) { %>
+            <p>未找到匹配的结果。</p>
+            <% } %>
+</body>
+
+</html>

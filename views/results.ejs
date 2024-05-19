@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        <% results.forEach(item => { %>
+            <li>道具ID:
+                <%= item.Nameid %>, 名称:
+                    <%= item.name %>, 说明:
+                        <%= item.shuoming %>
+            </li>
+            <% }); %>
+
+    </ul>
+</body>
+
+</html>
